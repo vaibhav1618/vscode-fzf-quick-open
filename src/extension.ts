@@ -57,7 +57,7 @@ function showFzfTerminal(name: string, fzfTerminal: vscode.Terminal | undefined)
 function moveToPwd(term: vscode.Terminal) {
 	if (vscode.window.activeTextEditor) {
 		let cwd = path.dirname(vscode.window.activeTextEditor.document.fileName);
-		term.sendText(`cd ${cwd}`);
+		term.sendText(`cd ${initialCwd}`);
 	}
 }
 
